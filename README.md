@@ -7,7 +7,7 @@ This repository contains information related to the AutoMat Marketplace API. Aut
 - Explore accessible data-packages
 - Retrieve accessbile data-packages.
 
-The following figure illustrates the role of the API as the entrypoint for Service Providers'.
+The following figure illustrates the role of the API as the entrypoint for Service Providers.
 
 ![Marketplace Architecture](doc/marketplace_architecture.png "Marletplace Architecture").
 
