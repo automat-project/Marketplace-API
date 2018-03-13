@@ -1,0 +1,407 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AutoMat Marketplace API Demo",
+		"_postman_id": "34cdf927-ec7c-3d37-d8a2-fa206dceb983",
+		"description": "Collection that includes examples about how to user the main endpoints exposed by Automat Marketplace API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1.0. Get service provider information",
+			"request": {
+				"url": "https://automat-marketplace.atosresearch.eu:1337/api/ServiceProvider/{{service_provider_id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "2.0. Get offer information",
+			"request": {
+				"url": "https://automat-marketplace.atosresearch.eu:1337/api/ServiceProviderOffer/{{offer__id}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "2.1. Get data availability for offer",
+			"request": {
+				"url": "https://automat-marketplace.atosresearch.eu:1337/api/ServiceProviderOffer/{{offer__id}}/VehicleDataDiscovery",
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "3.0. Get trips",
+			"request": {
+				"url": "https://automat-marketplace.atosresearch.eu:1337/api/ServiceProviderOffer/{{offer__id}}/trips",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "3.1. Get metadata",
+			"request": {
+				"url": "https://automat-marketplace.atosresearch.eu:1337/api/ServiceProviderOffer/{{offer__id}}/CvimMetadata",
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "3.2. Get metadata. Pagination",
+			"request": {
+				"url": {
+					"raw": "https://automat-marketplace.atosresearch.eu:1337/api/ServiceProviderOffer/{{offer__id}}/CvimMetadata?from=1000&limit=100",
+					"protocol": "https",
+					"host": [
+						"automat-marketplace",
+						"atosresearch",
+						"eu"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"ServiceProviderOffer",
+						"{{offer__id}}",
+						"CvimMetadata"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "1000",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "limit",
+							"value": "100",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "3.3. Get metadata. Filter channel",
+			"request": {
+				"url": {
+					"raw": "https://automat-marketplace.atosresearch.eu:1337/api/ServiceProviderOffer/{{offer__id}}/CvimMetadata?where={\"channels\":{{channels_filter}}}",
+					"protocol": "https",
+					"host": [
+						"automat-marketplace",
+						"atosresearch",
+						"eu"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"ServiceProviderOffer",
+						"{{offer__id}}",
+						"CvimMetadata"
+					],
+					"query": [
+						{
+							"key": "where",
+							"value": "{\"channels\":{{channels_filter}}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "3.4. Get metadata.Filter by trip",
+			"request": {
+				"url": {
+					"raw": "https://automat-marketplace.atosresearch.eu:1337/api/ServiceProviderOffer/{{offer__id}}/CvimMetadata?where={\"trip-id\":{{trip_filter}}}",
+					"protocol": "https",
+					"host": [
+						"automat-marketplace",
+						"atosresearch",
+						"eu"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"ServiceProviderOffer",
+						"{{offer__id}}",
+						"CvimMetadata"
+					],
+					"query": [
+						{
+							"key": "where",
+							"value": "{\"trip-id\":{{trip_filter}}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "3.5. Get metadata.Sort by submit-time",
+			"request": {
+				"url": {
+					"raw": "https://automat-marketplace.atosresearch.eu:1337/api/ServiceProviderOffer/{{offer__id}}/CvimMetadata?sort=submit-time",
+					"protocol": "https",
+					"host": [
+						"automat-marketplace",
+						"atosresearch",
+						"eu"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"ServiceProviderOffer",
+						"{{offer__id}}",
+						"CvimMetadata"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "submit-time",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "3.5. Get metadata.Sort by submit-time. DESC order",
+			"request": {
+				"url": {
+					"raw": "https://automat-marketplace.atosresearch.eu:1337/api/ServiceProviderOffer/{{offer__id}}/CvimMetadata?sort=-submit-time",
+					"protocol": "https",
+					"host": [
+						"automat-marketplace",
+						"atosresearch",
+						"eu"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"ServiceProviderOffer",
+						"{{offer__id}}",
+						"CvimMetadata"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "-submit-time",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "4.0. Get data",
+			"request": {
+				"url": {
+					"raw": "https://automat-marketplace.atosresearch.eu:1337/api/ServiceProviderOffer/{{offer__id}}/cvimDataPackages?from=0&limit=10",
+					"protocol": "https",
+					"host": [
+						"automat-marketplace",
+						"atosresearch",
+						"eu"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"ServiceProviderOffer",
+						"{{offer__id}}",
+						"cvimDataPackages"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "4.1. Get data. Filter by trip",
+			"request": {
+				"url": {
+					"raw": "https://automat-marketplace.atosresearch.eu:1337/api/ServiceProviderOffer/{{offer__id}}/cvimDataPackages?from=0&limit=1&where={\"trip-id\":{{trip_filter}}}",
+					"protocol": "https",
+					"host": [
+						"automat-marketplace",
+						"atosresearch",
+						"eu"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"ServiceProviderOffer",
+						"{{offer__id}}",
+						"cvimDataPackages"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "limit",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "where",
+							"value": "{\"trip-id\":{{trip_filter}}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{auth_token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
