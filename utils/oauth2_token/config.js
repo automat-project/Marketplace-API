@@ -20,7 +20,7 @@ var config = {};
 
 // URL to the FI-WARE Identity Management GE
 // default: https://account.lab.fi-ware.org
-config.idmUrl = 'http://automat-idm.atosresearch.eu';
+config.idmUrl = 'http://automat-new-idm.atosresearch.eu';
 
 // Oauth2 configuration
 

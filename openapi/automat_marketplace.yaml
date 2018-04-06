@@ -576,9 +576,6 @@ definitions:
       - timestamp-start
       - timestamp-stop
     properties:
-      vault-id:
-        type: string
-        description: 'Cloud Storage Vault ID, where the data packages are pushed into.'
       trip-id:
         type: string
         description: Unique identifier for data packages captured during the same trip.
@@ -647,7 +644,6 @@ definitions:
   CVIMDataPackage:
     description: CVIM data packages
     required:
-      - vault-id
       - cvim-version
       - type
       - measurement-channel-id
@@ -655,9 +651,6 @@ definitions:
       - timestamp-stop
       - data
     properties:
-      vault-id:
-        type: string
-        description: 'Cloud Storage Vault ID, where the data packages are pushed into.'
       datapackage-id:
         description: >-
           Unique identifier of the data package. Property is set by Cloud
